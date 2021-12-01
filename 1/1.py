@@ -1,12 +1,13 @@
 from aocd import data
 from aocd import submit
+from aocd import get
 
+# If set to True, use test data from the test_data.txt file"
 USE_TEST_DATA=False
-TEST_DATA='1/test_data.txt'
 
 def get_input():
     if USE_TEST_DATA:
-        with open(TEST_DATA) as f:
+        with open(f"{get.current_day()}/test_data.txt") as f:
             data_lines = f.read().splitlines()
     else:
         data_lines = data.splitlines()
