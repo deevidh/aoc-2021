@@ -7,7 +7,7 @@ USE_TEST_DATA=False
 
 def get_input():
     if USE_TEST_DATA:
-        with open(f"{get.current_day()}/test_data.txt") as f:
+        with open(f"{get.get_day_and_year()[0]}/test_data.txt") as f:
             data_lines = f.read().splitlines()
     else:
         data_lines = data.splitlines()
